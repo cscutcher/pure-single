@@ -1,5 +1,7 @@
 {% if ENABLE_GOOGLE_COMMENTS %}
     {% if "permalink_id" in article.metadata %}
+    <script src="https://apis.google.com/js/plusone.js">
+    </script>
     <div class="comments">
         <div id="disqus_thread" class="g-comments"
             data-href="{{SITEURL}}/permalinks/{{article.metadata["permalink_id"]}}"
