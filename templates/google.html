@@ -1,8 +1,8 @@
 {% if ENABLE_GOOGLE_COMMENTS %}
-    {% if "permalink_id" in page.metadata %}
+    {% if "permalink_id" in article.metadata %}
     <div class="comments">
         <div id="disqus_thread" class="g-comments"
-            data-href="{{SITEURL}}/permalinks/{{page.metadata["permalink_id"]}}"
+            data-href="{{SITEURL}}/permalinks/{{article.metadata["permalink_id"]}}"
             data-width="642"
             data-first_party_property="BLOGGER"
             data-view_type="FILTERED_POSTMOD">
