@@ -1,5 +1,12 @@
 <footer class="footer">
-    <p>&copy; {{ AUTHOR }} &ndash;
+    <p>
+        &copy; {{ AUTHOR }} &ndash;
+        {% if article and "permalink_id" in article.metadata %}
+        <a href={{SITEURL}}/permalinks/{{article.metadata["permalink_id"]}}>Permalink</a> &ndash;
+        {% endif %}
+        {% if page and "permalink_id" in page.metadata %}
+        <a href={{SITEURL}}/permalinks/{{page.metadata["permalink_id"]}}>Permalink</a> &ndash;
+        {% endif %}
         Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
         for <a href="http://blog.getpelican.com/">Pelican</a>
     </p>
