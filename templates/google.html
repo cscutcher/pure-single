@@ -1,0 +1,13 @@
+{% if ENABLE_GOOGLE_COMMENTS %}
+    {% if "permalink_id" in page.metadata %}
+    <div class="comments">
+        <div id="disqus_thread" class="g-comments"
+            data-href="{{SITEURL}}/permalinks/{{page.metadata["permalink_id"]}}"
+            data-width="642"
+            data-first_party_property="BLOGGER"
+            data-view_type="FILTERED_POSTMOD">
+        </div>
+    </div>
+    {% endif %}
+{% endif %}
+
