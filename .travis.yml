@@ -5,5 +5,4 @@ env:
 install:
 - gem install travis
 script:
-- travis login --auto --no-interactive -M --github-token $GITHUB_TOKEN --user cscutcher
-- travis restart --no-interactive --repo cscutcher/cscutcher.github.io.pelican
+- travis login --auto --no-interactive -M --github-token $GITHUB_TOKEN --user cscutcher && travis restart --no-interactive --repo cscutcher/cscutcher.github.io.pelican
