@@ -1,8 +1,8 @@
 language: ruby
 rvm: 2.1.0
-install:
-- gem install travis
-- travis login --auto --no-interactive -M --github-token $GITHUB_TOKEN
-script: travis restart --no-interactive --repo cscutcher/cscutcher.github.io.pelican
 env:
   secure: J8NkSq8YQWQQ/uH+rK+bx0Xv1qmf7X6JXrlLxHr+s/F0ZzFCzyzdZeuh0ITI9KFpvko26LKWQe6HkJyJVAx3rGLnta7g3hW36dtsP3JD/N9PVC0eWiE1kXTLSPvlnkEE0Jrpbhx4gf/x8XjIH/s5UOgYPvrDyAmh0BQw9qPJb0w=
+install:
+- gem install travis
+- travis login --auto --no-interactive -M --github-token $GITHUB_TOKEN --user cscutcher
+script: travis restart --no-interactive --repo cscutcher/cscutcher.github.io.pelican
