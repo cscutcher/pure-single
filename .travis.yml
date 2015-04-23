@@ -2,5 +2,5 @@ language: ruby
 rvm: 2.1.0
 install: 
     - gem install travis
-    - travis login --auto
-script: travis restart --repo cscutcher/cscutcher.github.io.pelican
+    - travis login --auto --no-interactive -M
+script: travis restart --no-interactive --repo cscutcher/cscutcher.github.io.pelican
