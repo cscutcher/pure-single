@@ -1,11 +1,8 @@
-language: ruby
-rvm: 2.1.0
+language: python
+python: 2.7
 env:
   secure: J8NkSq8YQWQQ/uH+rK+bx0Xv1qmf7X6JXrlLxHr+s/F0ZzFCzyzdZeuh0ITI9KFpvko26LKWQe6HkJyJVAx3rGLnta7g3hW36dtsP3JD/N9PVC0eWiE1kXTLSPvlnkEE0Jrpbhx4gf/x8XjIH/s5UOgYPvrDyAmh0BQw9qPJb0w=
 install:
-- gem install travis
+- pip install git+https://github.com/cscutcher/travis_restart_trigger.git
 script:
-- travis login --no-interactive -M --github-token $GITHUB_TOKEN --user cscutcher  --org
-- ls ~/.travis/config.yml
-- travis restart --no-interactive --repo cscutcher/cscutcher.github.io.pelican
-- while travis status --repo cscutcher/cscutcher.github.io.pellican --no-interactive -p; do echo "waiting for pelican build to finish"; sleep 5; done
+- travis_restart_trigger "cscutcher/cscutcher.github.io.pelican"
