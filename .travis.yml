@@ -8,3 +8,4 @@ script:
 - travis login --no-interactive -M --github-token $GITHUB_TOKEN --user cscutcher  --org
 - ls ~/.travis/config.yml
 - travis restart --no-interactive --repo cscutcher/cscutcher.github.io.pelican
+- while travis status --repo cscutcher/cscutcher.github.io.pellican --no-interactive -p; do echo "waiting for pelican build to finish"; sleep 5; done
