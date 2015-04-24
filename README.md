@@ -1,6 +1,7 @@
 Pure Single
 ===========
-This build status represents whether we successfully triggered a rebuild of my site when this repo is updated. 
+This build status represents whether we successfully triggered a rebuild of my site when this repo is updated.
+
 [![Build Status](https://travis-ci.org/cscutcher/pure-single.svg?branch=v1.0)](https://travis-ci.org/cscutcher/pure-single)
 
 [Blogging theme](http://purepelican.com) based on [Purecss](http:purecss.io) for [Pelican](http://docs.getpelican.com/) blogs.
