@@ -1,12 +1,12 @@
 {% if ENABLE_GOOGLE_COMMENTS %}
-    {% if "permalink_id" in article.metadata %}
+    {% if article.get_permalink_url() %}
     <script src="https://apis.google.com/js/plusone.js">
     </script>
     <div class="comments">
         <div id='gpluscomments'></div>
         <script src='https://apis.google.com/js/plusone.js' type='text/javascript'></script>
         <script>
-            gapi.comments.render('gpluscomments', {href: '{{SITEURL}}/permalinks/{{article.metadata["permalink_id"]}}', first_party_property: 'BLOGGER', view_type: 'FILTERED_POSTMOD'})
+gapi.comments.render('gpluscomments', {href: '{{article.get_permalink_url()}}', first_party_property: 'BLOGGER', view_type: 'FILTERED_POSTMOD'})
         </script>
     </div>
     {% endif %}
