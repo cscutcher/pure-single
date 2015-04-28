@@ -31,6 +31,9 @@
                             // under {% for tag in article.tags %}
                                 <a class="post-category" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
                             {% endfor %}
+                            {% if article.modified %}
+                            Last modified: {{article.modified}}
+                            {% endif %}
                         </p>
                 </header>
             </section>
