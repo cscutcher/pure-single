@@ -19,6 +19,23 @@
     {% if page and page.latex %}
         {{ page.latex }}
     {% endif %}
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{article.title}}",
+      "dateCreated": "{{article.date}}",
+      "datePublished": "{{article.modified}}",
+      "description": "{{article.title}}",
+      "keywords": "{% for tag in article.tags %}{{tag}},{% endfor %}",
+      "author": {
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "url": "{{SITEURL}}/pages/about_me"
+      }
+    }
+    </script>
 {% endblock %}
 
 {% block content %}
