@@ -309,5 +309,5 @@ pre {
 }
 
 .fig-right {
-    align: right;
+    float: right
 }
