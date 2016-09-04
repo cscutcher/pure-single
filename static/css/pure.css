@@ -307,3 +307,7 @@ pre {
         background-position: 0;
     }
 }
+
+.fig-right {
+    align: right;
+}
